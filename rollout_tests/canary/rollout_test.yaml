@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: example-rollout
+  name: nginxtest
 spec:
-  replicas: 10
+  # replicas: 10
   selector:
     matchLabels:
       app: nginxtest

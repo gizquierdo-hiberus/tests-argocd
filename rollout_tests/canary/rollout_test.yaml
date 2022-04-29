@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: nginxtest
 spec:
-  replicas: 20
+  replicas: 10
   selector:
     matchLabels:
       app: nginxtest
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginxhello 
-        image: nbrown/nginxhello:1.21
+        image: nbrown/nginxhello:1.20
         ports:
         - containerPort: 80
   minReadySeconds: 30

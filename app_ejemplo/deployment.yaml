@@ -15,7 +15,7 @@ spec:
         app: nginxtest
     spec:
       containers:
-      - image: nbrown/nginxhello:1.20
+      - image: nbrown/nginxhello:1.21
         name: nginxhello
         ports:
         - containerPort: 80

@@ -1,19 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: nginxtest
   name: nginxtest
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: nginxtest
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: nginxtest
     spec:
@@ -22,5 +19,10 @@ spec:
         name: nginxhello
         ports:
         - containerPort: 80
-        resources: {}
-status: {}
+        resources:
+          limits:
+            cpu: 200m
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 20Mi

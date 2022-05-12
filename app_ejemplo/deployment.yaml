@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginxtest
+  name: nginxtest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginxtest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginxtest
+    spec:
+      containers:
+      - image: nbrown/nginxhello:1.20
+        name: nginxhello
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
